@@ -5,7 +5,7 @@ OS_VERSION=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g'
 
 # Check if it's not Ubuntu 20.04
 if [[ "$OS_VERSION" != "20.04" ]]; then
-    echo "Current system is $OS_VERSION, The script only supports Ubuntu 20.04."
+    echo "Current system is not support, The script only supports Ubuntu 20.04 !"
     read -p "Do you want to reinstall Ubuntu 20.04 ? (y/no) : " answer
     if [[ "$answer" == "y" ]]; then
         curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
