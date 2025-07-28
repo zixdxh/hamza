@@ -5,8 +5,8 @@ OS_VERSION=$(lsb_release -rs)
 
 # Check if it's not Ubuntu 20.04
 if [[ "$OS_VERSION" != "20.04" ]]; then
-    echo "Current system is Ubuntu $OS_VERSION, not Ubuntu 20.04."
-    read -p "Do you want to reinstall Ubuntu 20.04? (y/no): " answer
+    echo "Current system is $OS_VERSION, The script only supports Ubuntu 20.04."
+    read -p "Do you want to reinstall Ubuntu 20.04 ? (y/no) : " answer
     if [[ "$answer" == "y" ]]; then
         curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
         bash reinstall.sh Ubuntu 20.04
