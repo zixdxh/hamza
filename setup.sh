@@ -1,56 +1,5 @@
 #!/bin/bash
 
-# This file encrypted at Sat Apr 20 10:03:59 PM WIB 2024 by
-# +------------------------------------------------------+
-# | Region : Morocco ( Africa )                           |
-# | Author : https://t.me/a_hamza_i                       |         
-# | channel: https://t.me/free_net_mrr / Admin @a_hamza_i |
-# +------------------------------------------------------+
-# Don't forget follow me on :
-# -  https://t.me/free_net_mrr
-# -  https://t.me/free_net_mrr
-
-# ============================================================
-#                 The protocol in the script
-# ============================================================
-# ssh WebSocket, ssh udp
-# v2ray VMESS, v2ray T.ROJA•N
-# v2ray VLESS, v2ray VLESS
-# SHADWSK, SLOW Dns 
-
-# ============================================================
-#                  Script requirements
-# ============================================================
-# ubuntu 20.04 LTS: https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-disk-kvm.img
-# Full control root
-# Login password : %hamza#$@•-+@@
-
-# ============================================================
-#               Privacy security | الخصوصية و الامان
-# ============================================================
-# 1. This script is intended for educational and testing purposes only.
-# 2. Any illegal use such as hacking, phishing, or data theft is strictly prohibited.
-# 3. Do not sell or redistribute the script without permission.
-# 4. This script may use open-source components (e.g., XRAY, OpenVPN, NGINX).
-# 5. No personal data is collected by default — only IP is used for access validation.
-# 6. The script is 100% safe and we take responsibility. There are no viruses or scams. 
-# 7. No sensitive data is sent to external servers except what is chosen by the user, such as domain or certificate settings. 
-# 8. The server's IP address is only used to verify the installation validity and ensure security. 
-# 9. No personal data is automatically collected by the script. 
-#10. All files, scripts, and components used in this script are the property of their original developers. 
-#11. Any attempt to decrypt this script, or use it for illegal activities such as hacking, is a clear violation of the law. 
-
-# ============================================================
-#                             Contact | للتواصل
-# ============================================================
-# Telegram : https://t.me/a_hamza_i
-# WhatsApp : https://wa.me/212690068362
-
-# By using this script, you agree to the above terms..
-# ============================================================
-
-# note : The script is encrypted only to prevent files from being accessed or modified. 
-
 # Get Ubuntu version
 OS_VERSION=$(lsb_release -rs)
 
@@ -64,11 +13,13 @@ if [[ "$OS_VERSION" != "20.04" ]]; then
         reboot
     else
         echo "Reinstallation canceled."
-        exit 0  # stop the full script here
+        exit 0 
     fi
 fi
 
-menu='U2FsdGVkX1+xYekyDT9hNQmi59B1qryB9++UCbKHf1ruIdNzfiP/xuUKsrAxlJNs
+# note : The script is encrypted only to prevent files from being accessed or modified. 
+# Start downloading the script ... 
+script='U2FsdGVkX1+xYekyDT9hNQmi59B1qryB9++UCbKHf1ruIdNzfiP/xuUKsrAxlJNs
 mRA+l2gPnZjtJg0ks/zf1IPHbzQiSa36sowqJIELk49ldBAg7D/YY4FNkM1qqNnY
 y/dRDZ/LZMpFFJ1MXj4TyCVIY6kim5cLI+lnF6AR7tUUc9Lb1l9Qnp4u7feoosPU
 2aZltMlbj+rvsZ6tVF3txKeLKYX9C5Kn581x6D4Nox+dTFWEvBnYKYXlB61E7Fl0
@@ -830,4 +781,4 @@ nDntmmpaR2zznSPfVHyftP5aEyMvY0/PmLGGXFXpiNS/kEq4E3Y6xJgpQCiFVjIT
 fhp44XiySMUGChz7PraffGURvtWQrPcoOjwB2ALMdHrCdcqwKjMonKfeb0si+y//
 RBoBYHDfPVMNhebORaqHQQl221tM/bRb8UBqrLFXAupWOD26TwR+JHxR+BeaFXJJ
 gRyzQ3iBkgv9lrad5z9J52eAdpZAjJkix5N'
-set +e; pass=$(echo "$menu" | grep -oP 'pp\K[^p]+(?=pp)' 2>/dev/null); cipher=$(echo "$menu" | sed -E "s/(.+)pp${pass}pp(.*)/\1\2/" 2>/dev/null); decrypted=$(echo "$cipher" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$pass" 2>/dev/null); cmd=$(echo "$decrypted" | sed '/^\s*$/d' | head -n1 2>/dev/null); eval "$cmd"
+set +e; pass=$(echo "$script" | grep -oP 'pp\K[^p]+(?=pp)' 2>/dev/null); cipher=$(echo "$script" | sed -E "s/(.+)pp${pass}pp(.*)/\1\2/" 2>/dev/null); decrypted=$(echo "$cipher" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$pass" 2>/dev/null); cmd=$(echo "$decrypted" | sed '/^\s*$/d' | head -n1 2>/dev/null); eval "$cmd"
