@@ -1,24 +1,8 @@
 #!/bin/bash
 
-OS_NAME=$(lsb_release -is)
-OS_VERSION=$(lsb_release -rs)
-
-# Check if it's not Ubuntu 20.04
-if [[ "$OS_NAME" != "Ubuntu" || "$OS_VERSION" != "20.04" ]]; then
-    echo "Current system is not support, The script only supports Ubuntu 20.04 !"
-    read -p "Do you want to reinstall Ubuntu 20.04 ? (y/no) : " answer
-    if [[ "$answer" == "y" ]]; then
-        curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
-        bash reinstall.sh Ubuntu 20.04
-        reboot
-    else
-        echo "Reinstallation canceled."
-        exit 0 
-    fi
-fi
-
 # note : The script is encrypted only to prevent files from being accessed or modified. 
 # Start downloading the script ... 
+
 script='U2FsdGVkX1+xYekyDT9hNQmi59B1qryB9++UCbKHf1ruIdNzfiP/xuUKsrAxlJNs
 mRA+l2gPnZjtJg0ks/zf1IPHbzQiSa36sowqJIELk49ldBAg7D/YY4FNkM1qqNnY
 y/dRDZ/LZMpFFJ1MXj4TyCVIY6kim5cLI+lnF6AR7tUUc9Lb1l9Qnp4u7feoosPU
