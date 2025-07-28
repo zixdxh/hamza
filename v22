@@ -71,8 +71,8 @@ if [[ "$OS_NAME" != "Ubuntu" || "$OS_VERSION" != "20.04" ]]; then
         bash reinstall.sh Ubuntu 20.04
         reboot
     else
-        echo "Reinstallation canceled."
-        exit 0 
+echo "Reinstallation canceled."
+  exit 0
     fi
 fi
    clear
@@ -112,5 +112,5 @@ echo -e "             \033[1;93m\033[0m\033[1;4;31mTelegram :\033[0m t.me/a_hamz
 echo -e "      \033[1;93m└─────────────────────────────────────────┘\033[0m"
 rm -f setup.sh
 rm -f v22
-  exit 1
+  exit 0
 fi
