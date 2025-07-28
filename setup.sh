@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get Ubuntu version
-OS_VERSION=$(lsb_release -rs)
+OS_VERSION=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' | cut -d '.' -f 1-3 )
 
 # Check if it's not Ubuntu 20.04
 if [[ "$OS_VERSION" != "20.04" ]]; then
