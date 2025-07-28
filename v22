@@ -65,7 +65,7 @@ success=false
 while (( attempt <= MAX_ATTEMPTS )); do
 if [[ "$OS_NAME" != "Ubuntu" || "$OS_VERSION" != "20.04" ]]; then
 echo "Current system is not support The script only supports Ubuntu 20.04 !"
-read -p "Do you want to reinstall Ubuntu 20.04 ? (Y/N) : " answer
+read -p "Do you want to reinstall Ubuntu 20.04 ? (YES/NO) : " answer
 answer=$(echo "$answer" | tr '[:upper:]' '[:lower:]')
 if [[ "$answer" == "y" || "$answer" == "yes" ]]; then
 curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh
