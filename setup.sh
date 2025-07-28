@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Get Ubuntu version
+OS_NAME=$(lsb_release -is)
 OS_VERSION=$(lsb_release -rs)
 
 # Check if it's not Ubuntu 20.04
-if [[ "$OS_VERSION" != "20.04" ]]; then
+if [[ "$OS_NAME" != "Ubuntu" || "$OS_VERSION" != "20.04" ]]; then
     echo "Current system is not support, The script only supports Ubuntu 20.04 !"
     read -p "Do you want to reinstall Ubuntu 20.04 ? (y/no) : " answer
     if [[ "$answer" == "y" ]]; then
