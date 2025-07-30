@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare -A URLS=(
-  ["amd64"]="https://script.ha-vps.store/o/v22/v22/v/v/vtt/v55/vttr/vyy/iiiiii/vps/ok/bbeje/idjsj/jdjeje/idjdjdj/djjejrrodn/djjddj/hdhddjdj/djjssj/hhdsh/jejeje/ensrrha.zip"
+  ["amd64"]="https://script.ha-vps.store/o/v22/v22/v/v/vtt/v55/vttr/vyy/iiiiii/vps/ok/bbeje/idjsj/jdjeje/idjdjdj/djjejrrodn/djjddj/hdhddjdj/djjssj/hhdsh/jejeje/ensrrha1.zip"
   ["arm64"]="https://script.ha-vps.store/o/v22/v22/v/v/vtt/v55/vttr/vyy/iiiiii/vps/ok/bbeje/idjsj/jdjeje/idjdjdj/djjejrrodn/djjddj/hdhddjdj/djjssj/hhdsh/jejeje/arch64.zip"
 )
 
