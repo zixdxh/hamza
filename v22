@@ -114,5 +114,5 @@ echo -e "             \033[1;93m\033[0m\033[1;4;31mWhatsApp :\033[0m wa.me/21269
 echo -e "             \033[1;93m\033[0m\033[1;4;31mTelegram :\033[0m t.me/a_hamza_i"
 echo -e "      \033[1;93m└─────────────────────────────────────────┘\033[0m"
 rm -f setup.sh >/dev/null 2>&1
-  exit 0
+exit 0
 fi
