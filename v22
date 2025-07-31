@@ -107,20 +107,11 @@ echo -e "  \033[1;93m  ┌──────────────────
 echo -e "  \033[1;93m  │\033[1;92m      .::. \033[0m\033[1;77mYou do not have access \033[1;92m.::.\033[0m"
 echo -e "  \033[1;93m  └────────────────────────────────────────────┘\033[0m"
 echo -e "      \033[1;93m┌────────────────────────────────────────┐\033[0m"
-echo -e "   \033[1;93m\033[0m\033[1;31m    You do not have sufficient permissions ! \033[0m"
-echo -e "   \033[1;93m\033[0m\033[1;31m   Administrator has not approved your access ! \033[0m"
-echo -e "   \033[1;93m\033[0m\033[1;31m        To get permission , contact here : \033[0m"
-echo -e "             \033[1;93m\033[0m\033[1;4;31mWhatsApp :\033[0m wa.me/212690068362"
-echo -e "             \033[1;93m\033[0m\033[1;4;31mTelegram :\033[0m t.me/a_hamza_i"
+echo -e "   \033[1;31m    You do not have sufficient permissions ! \033[0m"
+echo -e "   \033[1;31m   Administrator has not approved your access ! \033[0m"
+echo -e "   \033[1;31m        To get permission , contact here : \033[0m"
+echo -e "             \033[1;4;31mWhatsApp :\033[0m wa.me/212690068362"
+echo -e "             \033[1;4;31mTelegram :\033[0m t.me/a_hamza_i"
 echo -e "      \033[1;93m└─────────────────────────────────────────┘\033[0m"
-rm -f setup.sh >/dev/null 2>&1
 exit 0
-exit 2
-exit 1
-exit 2
-exit 2
-exit 2
-exit 1
-exit 2
-exit 1
 fi
