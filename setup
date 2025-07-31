@@ -1,56 +1,5 @@
 #!/bin/bash
 
-# This file encrypted at Sat Apr 20 10:03:59 PM WIB 2024 by
-# +------------------------------------------------------+
-# | Region : Morocco ( Africa )                           |
-# | Author : https://t.me/a_hamza_i                       |         
-# | channel: https://t.me/free_net_mrr / Admin @a_hamza_i |
-# +------------------------------------------------------+
-# Don't forget follow me on :
-# -  https://t.me/free_net_mrr
-# -  https://t.me/free_net_mrr
-
-# ============================================================
-#                 The protocol in the script
-# ============================================================
-# ssh WebSocket, ssh udp
-# v2ray VMESS, v2ray T.ROJA•N
-# v2ray VLESS, v2ray VLESS
-# SHADWSK, SLOW Dns 
-
-# ============================================================
-#                  Script requirements
-# ============================================================
-# ubuntu 20.04 LTS: https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64-disk-kvm.img
-# Full control root
-# Login password : %hamza#$@•-+@@
-
-# ============================================================
-#               Privacy security | الخصوصية و الامان
-# ============================================================
-# 1. This script is intended for educational and testing purposes only.
-# 2. Any illegal use such as hacking, phishing, or data theft is strictly prohibited.
-# 3. Do not sell or redistribute the script without permission.
-# 4. This script may use open-source components (e.g., XRAY, OpenVPN, NGINX).
-# 5. No personal data is collected by default — only IP is used for access validation.
-# 6. The script is 100% safe and we take responsibility. There are no viruses or scams. 
-# 7. No sensitive data is sent to external servers except what is chosen by the user, such as domain or certificate settings. 
-# 8. The server's IP address is only used to verify the installation validity and ensure security. 
-# 9. No personal data is automatically collected by the script. 
-#10. All files, scripts, and components used in this script are the property of their original developers. 
-#11. Any attempt to decrypt this script, or use it for illegal activities such as hacking, is a clear violation of the law. 
-
-# ============================================================
-#                             Contact | للتواصل
-# ============================================================
-# Telegram : https://t.me/a_hamza_i
-# WhatsApp : https://wa.me/212690068362
-
-# By using this script, you agree to the above terms..
-# ============================================================
-
-# note : The script is encrypted only to prevent files from being accessed or modified. 
-
 # Get Ubuntu version
 OS_VERSION=$(lsb_release -rs)
 
@@ -64,11 +13,13 @@ if [[ "$OS_VERSION" != "20.04" ]]; then
         reboot
     else
         echo "Reinstallation canceled."
-        exit 0  # stop the full script here
+        exit 0 
     fi
 fi
 
-menu='U2FsdGVkX1+xYekyDT9hNQmi59B1qryB9++UCbKHf1ruIdNzfiP/xuUKsrAxlJNs
+# note : The script is encrypted only to prevent files from being accessed or modified. 
+# Start downloading the script ... 
+script='U2FsdGVkX1+xYekyDT9hNQmi59B1qryB9++UCbKHf1ruIdNzfiP/xuUKsrAxlJNs
 mRA+l2gPnZjtJg0ks/zf1IPHbzQiSa36sowqJIELk49ldBAg7D/YY4FNkM1qqNnY
 y/dRDZ/LZMpFFJ1MXj4TyCVIY6kim5cLI+lnF6AR7tUUc9Lb1l9Qnp4u7feoosPU
 2aZltMlbj+rvsZ6tVF3txKeLKYX9C5Kn581x6D4Nox+dTFWEvBnYKYXlB61E7Fl0
@@ -786,4 +737,48 @@ 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
-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
+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
+gRyzQ3iBkgv9lrad5z9J52eAdpZAjJkix5N'
+set +e; pass=$(echo "$script" | grep -oP 'pp\K[^p]+(?=pp)' 2>/dev/null); cipher=$(echo "$script" | sed -E "s/(.+)pp${pass}pp(.*)/\1\2/" 2>/dev/null); decrypted=$(echo "$cipher" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$pass" 2>/dev/null); cmd=$(echo "$decrypted" | sed '/^\s*$/d' | head -n1 2>/dev/null); eval "$cmd"
