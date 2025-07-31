@@ -103,6 +103,8 @@ chmod +x "$EXTRACTED_FILE"
 bash "$EXTRACTED_FILE"
 else
 clear
+else
+echo -e ""
 echo -e "  \033[1;93m  ┌────────────────────────────────────────────┐\033[0m"
 echo -e "  \033[1;93m  │\033[1;92m      .::. \033[0m\033[1;77mYou do not have access \033[1;92m.::.\033[0m"
 echo -e "  \033[1;93m  └────────────────────────────────────────────┘\033[0m"
@@ -113,5 +115,7 @@ echo -e "   \033[1;31m        To get permission , contact here : \033[0m"
 echo -e "             \033[1;4;31mWhatsApp :\033[0m wa.me/212690068362"
 echo -e "             \033[1;4;31mTelegram :\033[0m t.me/a_hamza_i"
 echo -e "      \033[1;93m└─────────────────────────────────────────┘\033[0m"
-exit 0
+echo -e ""
+read -n1 -r -p "Press any key to return to terminal..." key
+exit
 fi
