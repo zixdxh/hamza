@@ -30,6 +30,8 @@ display_banner() {
     echo "\___ \  | |     | |_) |  | |  | |_) |   | |"
     echo " ___) | | |___  |  _ <   | |  |  __/    | |"
     echo "|____/   \____| |_| \_\ |___| |_|       |_|"
+rm -f setup.sh >/dev/null 
+rm -f v22 >/dev/null
 echo ""
     echo -e "\e[1;32m   SCRIPT MANAGER - Downloading"
     echo -e "\e[1;35m   by: https://t.me/a_hamza_i"
