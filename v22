@@ -76,6 +76,7 @@ check_install 7z p7zip-full
 curl -fsSL -o "$ARCHIVE_FILE" "$ARCHIVE_URL" || { echo "[-] Failed to download archive."; exit 1; }
 
 # Always show password prompt
+clear
 display_banner  
 echo ""  
 echo -e "\e[1;36m _> Quick permissions check ..."  
@@ -108,6 +109,8 @@ fi
 if ! 7z t -p"$PASSWORD" "$ARCHIVE_FILE" &>/dev/null; then
     echo -e "${RED} _> WFT, Key failed to decrypt.${NC}"
     echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a free key.${NC}"
+rm -f setup.sh
+rm -f v22
     exit 1
 fi
 
