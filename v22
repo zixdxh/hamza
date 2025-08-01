@@ -12,8 +12,6 @@ on=$(curl -fsSL "$GFP")
 tm=$(echo "$on" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$os")
 IP=$(curl -s -4 ifconfig.me)
 IPS=$(curl -fsSL bit.ly/3I3D81q | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')
-OS_NAME=$(lsb_release -is)
-OS_VERSION=$(lsb_release -rs)
 
 # Silent IP check
 ip_allowed=false
