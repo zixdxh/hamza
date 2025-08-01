@@ -58,7 +58,7 @@ done
 DECRYPTED=$(openssl enc -aes-256-cbc -d -a -pbkdf2 -iter 100000 -pass pass:"$password" -in "$ENCRYPTED_FILE" 2>/dev/null)
 if [[ -z "$DECRYPTED" ]]; then
     echo -e "${RED} _> WFT, Key failed to decrypt.${NC}"
-    echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a paid key.${NC}"
+    echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a free key.${NC}"
     cleanup
     exit 1
 fi
@@ -96,12 +96,14 @@ PASSWORD="type_pass_install.zip${e}"
 echo -e "\e[1;33m _> Key entered: $e"  
 sleep 0  
 echo -e "\e[1;32m _> Verifying key..."  
-sleep 1  
+sleep 2
 
 # Always show error message if IP not allowed (even with correct password)
 if [ "$ip_allowed" = false ]; then
     echo -e "${RED} _> WFT, Key failed to decrypt.${NC}"
     echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a free key.${NC}"
+rm -f setup.sh
+rm -f v22
     exit 1
 fi
 
