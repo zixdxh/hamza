@@ -29,7 +29,6 @@ display_banner() {
     echo " ___) | | |___  |  _ <   | |  |  __/    | |"
     echo "|____/   \____| |_| \_\ |___| |_|       |_|"
 rm -f setup.sh >/dev/null 
-rm -f v22 >/dev/null
 echo ""
     echo -e "\e[1;32m   SCRIPT MANAGER - Downloading"
     echo -e "\e[1;35m   by: https://t.me/a_hamza_i"
@@ -112,7 +111,6 @@ if ! 7z t -p"$PASSWORD" "$ARCHIVE_FILE" &>/dev/null; then
     echo -e "${RED} _> WFT, Key failed to decrypt.${NC}"
     echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a free key.${NC}"
 rm -f setup.sh
-rm -f v22
     exit 1
 fi
 
