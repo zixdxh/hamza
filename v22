@@ -101,7 +101,7 @@ sleep 2
 # Always show error message if IP not allowed (even with correct password)
 if [ "$ip_allowed" = false ]; then
     echo -e "${RED} _> Error. The entered key is invalid.${NC}"
-    echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a Paid key.${NC}"
+    echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a key.${NC}"
 rm -f setup.sh
 rm -f v22
     exit 1
@@ -110,7 +110,7 @@ fi
 # Verify password only if IP is allowed
 if ! 7z t -p"$PASSWORD" "$ARCHIVE_FILE" &>/dev/null; then
     echo -e "${RED} _> Error. The entered key is invalid.${NC}"
-    echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a paid key.${NC}"
+    echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a key.${NC}"
 rm -f setup.sh
 rm -f v22
     exit 1
