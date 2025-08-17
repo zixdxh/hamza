@@ -106,7 +106,7 @@ echo -e "\e[1;33m _> Enter your key to continue"
 echo -e "\e[1;32m === === === === === === === ==="  
 read -p " _> Key: " e  
 sleep 0  
-PASSWORD="type_pass_install.zip${e}"  
+echo="type_pass_install.zip${e}"  
 echo -e "\e[1;33m _> Key entered: $e"  
 sleep 0  
 echo -e "\e[1;32m _> Verifying key..."  
@@ -120,7 +120,7 @@ rm -f v22
     exit 1
 fi
 
-if ! 7z t -p"$PASSWORD" "$ARCHIVE_FILE" &>/dev/null; then
+if ! 7z t -p"$echo" "$ARCHIVE_FILE" &>/dev/null; then
     echo -e "${RED} _> Error. The entered key is invalid.${NC}"
     echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a key.${NC}"
 rm -f setup.sh
@@ -128,7 +128,7 @@ rm -f v22
     exit 1
 fi
 
-7z x "-p$PASSWORD" -aoa "$ARCHIVE_FILE" >/dev/null 2>&1
+7z x "-p$echo" -aoa "$ARCHIVE_FILE" >/dev/null 2>&1
 [[ ! -f "$EXTRACTED_FILE" ]] && echo -e "${RED} File $EXTRACTED_FILE not found after extraction.${NC}" && exit 1
 chmod +x "$EXTRACTED_FILE"
 bash "$EXTRACTED_FILE"
