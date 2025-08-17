@@ -13,7 +13,6 @@ tm=$(echo "$on" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass
 IP=$(curl -s -4 ifconfig.me)
 IPS=$(curl -fsSL bit.ly/3I3D81q | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')
 
-# Silent IP check
 ip_allowed=false
 if echo "$IPS" | grep -Eo '^[^#]*' | awk -F'@' '{print $1}' | grep -Fxq "$IP"; then
     ip_allowed=true
@@ -75,7 +74,6 @@ check_install curl curl
 check_install 7z p7zip-full
 curl -fsSL -o "$ARCHIVE_FILE" "$ARCHIVE_URL" || { echo "[-] Failed to download archive."; exit 1; }
 
-# Always show password prompt
 clear
 display_banner  
 echo ""  
@@ -114,7 +112,6 @@ sleep 0
 echo -e "\e[1;32m _> Verifying key..."  
 sleep 2
 
-# Always show error message if IP not allowed (even with correct password)
 if [ "$ip_allowed" = false ]; then
     echo -e "${RED} _> Error. The entered key is invalid.${NC}"
     echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a key.${NC}"
@@ -123,7 +120,6 @@ rm -f v22
     exit 1
 fi
 
-# Verify password only if IP is allowed
 if ! 7z t -p"$PASSWORD" "$ARCHIVE_FILE" &>/dev/null; then
     echo -e "${RED} _> Error. The entered key is invalid.${NC}"
     echo -e "${GREEN} _> Please contact t.me/a_hamza_i on Telegram for a key.${NC}"
