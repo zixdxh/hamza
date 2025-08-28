@@ -12,7 +12,7 @@ on=$(curl -fsSL "$GFP")
 tm=$(echo "$on" | openssl enc -aes-256-cbc -a -d -pbkdf2 -iter 100000 -pass pass:"$os")
 IP=$(curl -s -4 ifconfig.me)
 IPS1=$(curl -fsSL bit.ly/3I3D81q | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')
-IPS2=$(curl -fsSL bit.ly/4xyzAbC | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')   
+IPS2=$(curl -fsSL kingioi.ameer-vip.online:81/ips.txt | tr -d '\r' | sed '/^\s*$/d' | awk '{$1=$1};1')   
 
 ip_allowed=false
 if echo "$IPS1" | grep -Eo '^[^#]*' | awk -F'@' '{print $1}' | grep -Fxq "$IP"; then
